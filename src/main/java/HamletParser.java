@@ -36,4 +36,12 @@ public class HamletParser {
         return hamletData;
     }
 
+    public void changeHamletToLeon() {
+    }
+
+    public int numOfHamletOcc() {
+    }
+
+    public int numOfLeanOcc() {
+    }
 }

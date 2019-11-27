@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,6 +16,13 @@ public class HamletParserTest {
 
     @Test
     public void testChangeHamletToLeon() {
+
+        int numOfHamlets = hamletParser.numOfHamletOcc();
+
+        hamletParser.changeHamletToLeon();
+
+        Assert.assertEquals(0,hamletParser.numOfHamletOcc());
+        Assert.assertEquals(numOfHamlets, hamletParser.numOfLeanOcc());
     }
 
     @Test
