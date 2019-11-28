@@ -16,7 +16,6 @@ public class HamletParserTest {
 
     @Test
     public void testChangeHamletToLeon() {
-
         int numOfHamlets = hamletParser.numOfHamletOcc();
 
         hamletParser.changeHamletToLeon();
@@ -27,6 +26,12 @@ public class HamletParserTest {
 
     @Test
     public void testChangeHoratioToTariq() {
+        int numOfHoratio = hamletParser.numOfHoratioOcc();
+
+        hamletParser.changeHoratioToTariq();
+
+        Assert.assertEquals(0,hamletParser.numOfHoratioOcc());
+        Assert.assertEquals(numOfHoratio, hamletParser.numOfTariqOcc());
     }
 
     @Test

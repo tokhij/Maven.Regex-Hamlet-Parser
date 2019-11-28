@@ -40,8 +40,21 @@ public class HamletParser {
     }
 
     public int numOfHamletOcc() {
+        return 0;
     }
 
     public int numOfLeanOcc() {
+        return 0;
     }
+
+    public void changeHoratioToTariq() {
+    }
+
+    public int numOfTariqOcc() {
+    }
+
+    public int numOfHoratioOcc() {
+    }
+
+
 }
