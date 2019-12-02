@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by thook on 10/7/15.
@@ -8,6 +10,8 @@ import java.util.Scanner;
 public class HamletParser {
 
     private String hamletData;
+    Pattern hamletPattern = Pattern.compile("Hamlet", Pattern.CASE_INSENSITIVE);
+    Pattern horatioPattern = Pattern.compile("Horatio", Pattern.CASE_INSENSITIVE);
 
     public HamletParser(){
         this.hamletData = loadFile();
@@ -36,25 +40,20 @@ public class HamletParser {
         return hamletData;
     }
 
-    public void changeHamletToLeon() {
+    public Boolean FindHoratio() {
+        return horatioPattern.matcher(hamletData).find();
     }
 
-    public int numOfHamletOcc() {
-        return 0;
+    public Boolean FindHamlet() {
+        return hamletPattern.matcher(hamletData).find();
     }
 
-    public int numOfLeanOcc() {
-        return 0;
+    public String changeHamletToLeon(String s) {
+        return hamletPattern.matcher(s).replaceAll("Leon");
     }
 
-    public void changeHoratioToTariq() {
+    public String changeHoratioToTariq(String s) {
+        return horatioPattern.matcher(s).replaceAll("Tariq");
     }
-
-    public int numOfTariqOcc() {
-    }
-
-    public int numOfHoratioOcc() {
-    }
-
 
 }
